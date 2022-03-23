@@ -15,10 +15,21 @@ body {
   background: #ebebf3;
   /*background: #e5e5e5;*/
 }
+
+@keyframes textH1 {
+  from {
+    margin-left: -790px;
+  }
+  to {
+    margin-left: 90px;
+  }
+}
 .t {
   width: 790px;
   margin-top: 80px;
   margin-left: 90px;
+  animation-name: textH1;
+  animation-duration: 2s;
 }
 .q__text {
   font-weight: 500;
@@ -32,7 +43,11 @@ body {
   flex-wrap: wrap;
   margin-top: 400px;
   margin-left: 300px;
+
+  /* color: rgb(250, 250, 250); */
 }
+
+/**/
 
 .quest {
   margin-right: 70px;
@@ -44,26 +59,59 @@ body {
   background: url(img/Rectangle\ 4.png);
   background-repeat: no-repeat;
 
-  /* border-radius: 90px;
-  border: 1px solid rgb(213, 206, 206); */
-
   text-align: left;
   font-size: 25px;
 }
+
 .quest:hover {
   background: url(img/Rectangle\ 4\ Hover.png);
   background-repeat: no-repeat;
   background-size: 390px;
+  transition-property: background;
+  transition-duration: 0.3s;
 }
-.quest:active {
+
+/*for true*/
+.activeQ {
   background: url(img/Rectangle\ 4\ Correct.png);
   background-repeat: no-repeat;
   background-size: 390px;
+  transition: 1s;
 }
-/* #f2d0b7*/
+.activeQ:hover {
+  background: url(img/Rectangle\ 4\ Correct.png);
+  background-repeat: no-repeat;
+  background-size: 390px;
+  transition: 1s;
+}
+/*for false*/
+.activeF {
+  background: url(img/false.png);
+  background-repeat: no-repeat;
+  background-size: 390px;
+  transition: 1s;
+}
+.activeF:hover {
+  background: url(img/false.png);
+  background-repeat: no-repeat;
+  background-size: 390px;
+  transition: 1s;
+}
+
+@keyframes qp {
+  from {
+    color: white;
+  }
+  to {
+    color: black;
+  }
+}
 .q_p {
   padding-left: 50px;
   margin-top: 25px;
+
+  animation-name: qp;
+  animation-duration: 4s;
 }
 .variant {
   position: absolute;
