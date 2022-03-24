@@ -166,7 +166,7 @@ img {
 }
 /*for false*/
 .activeF {
-  background: url(D:\react\WhoWantsToBeMillionaire\who-wants\src\assets\img\RectangleCorrect.png);
+  background: url(D:\react\WhoWantsToBeMillionaire\who-wants\src\assets\img\false.png);
   background-repeat: no-repeat;
   background-size: 390px;
   transition: 1s;
@@ -202,6 +202,61 @@ img {
 .price {
   width: 500px;
   margin-right: 1px;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+}
+
+/*scores*/
+.contPrice {
+  text-align: center;
+  border-bottom: 1px solid gray;
+}
+.scores {
+  width: 500px;
+  height: 50px;
+
+  text-align: center;
+
+  background: url(D:\react\WhoWantsToBeMillionaire\who-wants\src\assets\img\Inac.png);
+  background-size: 500px;
+  background-repeat: no-repeat;
+
+  margin-top: 10px;
+}
+
+.pS {
+  height: 50px;
+  padding-top: 10px;
+}
+
+/*disabled*/
+.disabledPrice {
+  color: #d0d0d8;
+  transition-property: color;
+  transition-duration: 2s;
+}
+/*active*/
+@keyframes fromBackActive {
+  from {
+    background: url(D:\react\WhoWantsToBeMillionaire\who-wants\src\assets\img/Inac.png);
+    background-size: 500px;
+    background-repeat: no-repeat;
+  }
+  to {
+    background: url(D:\react\WhoWantsToBeMillionaire\who-wants\src\assets\img/Current.png);
+    background-size: 500px;
+    background-repeat: no-repeat;
+  }
+}
+
+.win {
+  background: url(D:\react\WhoWantsToBeMillionaire\who-wants\src\assets\img/Current.png);
+  background-size: 500px;
+  background-repeat: no-repeat;
+
+  animation-name: fromBackActive;
+  animation-duration: 2s;
 }
 
 /*end 
