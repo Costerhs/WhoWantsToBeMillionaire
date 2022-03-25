@@ -1,7 +1,16 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function Total() {
+  let text = useSelector((state) => state.game);
+  let txs;
+  if (text.mainNum === 0) {
+    txs = 'Oops,try your luck next time ' + '🤭';
+  } else if (text.mainNum === 12) {
+    txs = 'congratulations you are a millionair' + '🥳🥳🥳🥳';
+  } else {
+    txs = text.score[12 - text.mainNum] + 'earned';
+  }
   return (
     <div className="total">
       <div className="cont_tot">
@@ -11,11 +20,11 @@ function Total() {
         <div className="thin">
           <div className="total__text">
             <h3 className="score">Total score:</h3>
-            <h1 className="cen">$8,000 earned</h1>
+            <h1 className="cen">{txs} </h1>
           </div>
-          <NavLink to={'/start'}>
+          <a href="/start">
             <button className="total_btn">Try again</button>
-          </NavLink>
+          </a>
         </div>
       </div>
     </div>

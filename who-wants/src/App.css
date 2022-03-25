@@ -111,6 +111,9 @@ img {
   animation-name: textH1;
   animation-duration: 2s;
 }
+.mini {
+  color: #ebebf3;
+}
 .q__text {
   font-weight: 500;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

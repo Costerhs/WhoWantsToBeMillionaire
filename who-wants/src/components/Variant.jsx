@@ -1,14 +1,20 @@
 import classNames from 'classnames';
 import React from 'react';
-import falseBack from './../assets/img/false.png';
 
-function Variant({ variant, answer, Click, backTrue, backFalse, classForRes }) {
+function Variant({ variant, answer, forAnimation, Click, id, classForRes }) {
   let cl = classForRes;
-
+  const Clickes = () => {
+    Click(id);
+  };
   return (
-    <div className={classNames('quest q1', cl)} onClick={Click}>
+    <div className={classNames('quest q1', cl)} onClick={Clickes}>
       <p className="variant">{variant}</p>
-      <p className="q_p">{answer}</p>
+      <p
+        className={classNames({
+          q_p: forAnimation,
+        })}>
+        {answer}
+      </p>
     </div>
   );
 }
